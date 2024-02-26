@@ -1,0 +1,23 @@
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}   
+
+ 
+    <div style="text-align: center;" class="container">
+        <h1>Edição de Pessoas</h1>
+
+        <form action="{% url 'update' id=usuario.id_usuario %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="user_id" value="{{ usuario.id_usuario }}">
+
+            <label for="nome">Nome</label>
+            <input class="form-control-sm" type="text" name="nome" value="{{ usuario.nome }}">
+
+            <label for="idade">Idade</label>
+            <input class="form-control-sm" type="text" name="idade" value="{{ usuario.idade }}">
+            
+            <button class="form-control-sm" type="submit">Atualizar</button>
+        </form>
+
+    </div>
+
+{% endblock %}   
