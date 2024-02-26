@@ -1,0 +1,30 @@
+:root {
+    --cor-fundo: white; /* Cor de fundo padrão (modo claro) */
+    --cor-texto: black; /* Cor do texto padrão (modo claro) */
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    transition: background-color 0.5s, color 0.5s; /* Efeito de transição suave */
+}
+
+
+body.modo-noite {
+    --cor-fundo: black;
+    --cor-texto: white;
+}
+
+
+
+.modo-noite .table {
+  
+    background-color: #929292;
+    color: rgb(255, 255, 255);
+}
+
+
+.modo-noite .table td,
+.modo-noite .table th {
+    border-color: #000000;
+}

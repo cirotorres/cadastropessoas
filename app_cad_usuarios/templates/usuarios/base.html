@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+{% load static %} <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% load static %}
+   
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,10 +16,14 @@
 
     <title>Cadastre-me!</title>
 
-  
-    
+   <link rel="stylesheet" href="{% static "blue.css" %}">
+
   </head>
   <body>
+
+   
+
+
     <nav style="background-color: aquamarine !important" class="navbar navbar-light bg-light">
       <div class="container-fluid">
         <span class="navbar-brand mb-0 h1" >
@@ -30,6 +34,16 @@
           >
         </span>
       </div>
+
+
+<!-- Checkbox para ativar/desativar o modo noite -->
+<button onclick="toggleModoNoite()">Alternar Modo</button>
+
+<script>
+    function toggleModoNoite() {
+        document.body.classList.toggle('modo-noite');
+    }
+</script>
 
     </nav>
 
